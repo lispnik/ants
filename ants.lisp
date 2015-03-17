@@ -1,7 +1,3 @@
-(defpackage #:ants
-  (:use #:common-lisp
-        #:stmx))
-
 (in-package #:ants)
 
 ;;; (ql:quickload "stmx")
