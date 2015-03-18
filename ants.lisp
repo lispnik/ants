@@ -124,10 +124,22 @@
                          (not (slot-value ahead 'ant)))
                     (move location))
                    (t (let ((ranks #|...|# nil))
-                        ;; location
+                        ;; TODO
                         location)))
-             nil)
-         (list ahead ahead-left ahead-right))))))
+             (cond ((and (plusp (slot-value place 'food))
+                         (not (slot-value place 'home)))
+                    (take-food location)
+                    (turn location 4)
+                    ;; TODO
+                    )
+                   ((and (plusp (slot-value ahead 'food))
+                         (not (slot-value 'ahead 'home))
+                         (not (slot-value 'ahead 'ant)))
+                    ;; TODO
+                    )
+                   (t (let ((ranks #|...|# nil))
+                        ;; TODO
+                        location)))))))))
 
 (defun evaporate ()
   (atomic

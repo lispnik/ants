@@ -3,4 +3,7 @@
   :components ((:file "packages")
                (:file "ants")
                (:file "ui"))
-  :depends-on (#:stmx))
+  :depends-on (#:stmx
+               #:bordeaux-threads
+               #:clinch-sdl
+               #:clinch))
