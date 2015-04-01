@@ -5,5 +5,4 @@
                (:file "ui"))
   :depends-on (#:stmx
                #:bordeaux-threads
-               #:clinch-sdl
-               #:clinch))
+               #:clunit))

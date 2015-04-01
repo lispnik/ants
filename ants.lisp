@@ -60,6 +60,15 @@
         (+ n b)
         n)))
 
+(defun weighted-random (slices)
+  (let* ((total (apply #'+ slices))
+         (r (random total)))
+    (loop for i from 0 upto (length slices)
+       with j = (nth i slices)
+       sum (nth j slices) into s
+       when (>= s r)
+       do (return i))))
+
 (defvar direction-delta
   '#((v 0 -1) (v 1 -1) (v 1 0) (v 1 1) (v 0 1) (v -1 1) (v -1 0) (v -1 -1)))
 
