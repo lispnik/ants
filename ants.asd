@@ -1,8 +1,6 @@
 (asdf:defsystem #:ants
-  :serial t
-  :components ((:file "packages")
-               (:file "ants")
-               (:file "ui"))
-  :depends-on (#:stmx
-               #:bordeaux-threads
-               #:clunit))
+  :depends-on (#:stmx #:bordeaux-threads)
+  :components ((:module "src"
+                        :components ((:file "package")
+                                     (:file "ants"))))
+  :in-order-to ((test-op (test-op "ants-test"))))
