@@ -1,0 +1,3 @@
+(ql:quickload "stmx")
+(ql:quickload "bordeaux-threads")
+(ql:quickload "clunit")

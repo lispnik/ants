@@ -1,7 +1,5 @@
 (in-package #:ants)
 
-;;; (ql:quickload "stmx")
-
 (transactional
  (defclass cell ()
    ((food :initform 0)

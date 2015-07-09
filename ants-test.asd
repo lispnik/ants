@@ -6,4 +6,4 @@
 
 (defmethod perform ((op asdf:test-op) (c (eql (asdf:find-system :ants-test))))
   (funcall (intern "RUN-SUITE" "CLUNIT")
-           'ants.test::ants-suite :report-progress nil))
+           (intern "ANTS-SUITE" "ANTS.TEST") :report-progress nil))
